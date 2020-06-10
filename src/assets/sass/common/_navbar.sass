@@ -1,0 +1,50 @@
+nav.navbar
+  transition: 0.5s
+  background-color: $white_color
+.container-fluid
+  padding: 0px $large_space
+  button
+    border-radius: 5px
+    border: 1px solid $secondary_color
+.dropdown-toggle
+  font-size: 20px
+  margin: 0px 5px
+  &::after
+    border: none !important
+    content: "" !important
+.navbar-brand
+  letter-spacing: 1px
+  font-weight: 600
+  color: $primary_color
+  @include small
+    font-size: 18px
+  &:hover
+    color: $primary_darken_color
+.nav-link
+  letter-spacing: 2px
+  font-weight: 300
+  i
+    position: relative
+    font-size: 20px
+    span
+      min-width: 18px
+      min-height: 18px
+      position: absolute
+      top: -9px
+      right: -$small_space
+      border-radius: 50%
+      font-size: 14px
+      font-weight: 600
+      line-height: 18px
+      text-align: center
+      color: $white_color
+      background-color: $primary_darken_color
+.nav-link,.navbarToggler-icon
+  color: $secondary_color
+  cursor: pointer
+  &:hover
+    color: $primary_color
+.dropdown-menu
+  width: 330px
+  @include small
+    width: 270px

@@ -1,0 +1,36 @@
+@keyframes drop
+  0%
+    transform: translateY(-5px)
+  100%
+    transform: translateY(15px)
+    opacity: 0
+
+@keyframes beat
+  0%
+    transform: translateY(0px)
+  50%
+    transform: translateY(-5px)
+  100%
+    transform: translateY(0px)
+
+@keyframes fadeInUp
+  0%
+    transform: translateY(50px)
+    opacity: 0
+  100%
+    transform: translateY(0px)
+    opacity: 1
+
+@keyframes wiggle
+  0%, 80%, 100%
+    transform: translate(0px, 0px) rotate(0deg)
+    color: $secondary_color
+  82.5%, 90%
+    transform: rotate(5deg)
+    color: $primary_color
+  85%, 92.5%
+    transform: rotate(-5deg)
+    color: $primary_color
+  87.5%, 95%
+    transform: rotate(5deg)
+    color: $primary_color

@@ -1,0 +1,85 @@
+.topBox
+  position: relative
+  top: 0
+  left: 0
+  height: 40px
+  &.hide
+    display: none
+.newsContent
+  transintion: 0.5s
+  &.hide
+    display: none
+.news
+  position: relative
+  background-color: $primary_color
+  padding: 5px
+  p
+    margin: 0 5px
+    font-weight: 300
+    letter-spacing: 2px
+    color: $white_color
+  p,button
+    display: inline-block
+    @include small
+      font-size: 14px
+  button.btn.btn-sm
+    margin-left: $large_space
+    transition: $duration
+    border: 1px solid $white_color
+    color: $white_color
+    @include small
+      margin-left: $small_space
+    @include x-small
+      margin-left: 10px
+      padding: 4px 10px
+    &:hover
+      color: $black_color
+  .newsClose
+    position: absolute
+    top: 0
+    right: 5%
+    font-size: 20px
+    line-height: 41px
+    color: $white_color
+    cursor: pointer
+    @include x-small
+      right: 3%
+    &:hover
+      color: $black_color
+#getCouponModal
+  .modal-body
+    .form-group
+      padding: 0px 10px
+    .subscribeButton
+      text-align: center
+      button.btn
+        @include button()
+          background-color: $primary_lighten_color
+          color: $black_color
+          &:hover
+            background-color: $primary_color
+    .coupon
+      position: relative
+      padding: 0px 10px
+      margin-bottom: $small_space
+      .backImg
+        background-image: url("../src/assets/img/green_plant.jpg")
+        background-position: center center
+        background-size: cover
+        padding: 120px 15px
+        position: relative
+        &::after
+          position: absolute
+          content: ''
+          left: 50%
+          top: 50%
+          transform: translateX(-50%) translateY(-50%)
+          background-color: $white_color
+          opacity: 0.6
+          +size(95%,90%)
+      h3
+        position: absolute
+        left: $small_space
+        top: 45%
+        transform: translateY(-50%)
+        

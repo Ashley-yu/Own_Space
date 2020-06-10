@@ -1,0 +1,78 @@
+.container-fluid.productsContent
+  padding: 0px $large_space
+  @include medium
+    padding: 0px $medium_space
+.productBox
+  margin: 0px 5px $large_space 5px
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2)
+  cursor: pointer
+  transition: $duration
+  @include hover-supported
+    transform: translate(6px, -6px)
+    box-shadow: -3px 3px 10px rgba(0,0,0,0.2)
+  .top
+    position: relative
+    height: 300px
+    img
+      +size(100%,100%)
+      object-fit: cover
+      object-position: 50% 50%
+    .tag
+      position: absolute
+      top: 9px
+      right: 9px
+      padding: 3px 10px
+      border-radius: $radius
+      font-weight: 500
+      font-size: 14px
+      letter-spacing: 1px
+      color: $white_color
+      background-color: $title_color
+  .bottom
+    padding: $small_space
+    h3
+      font-size: 18px
+      font-weight: 400
+    .price
+      width: 80%
+      letter-spacing: 1px
+      color: $black_color
+    i
+      font-size: 24px
+      color: $secondary_color
+      margin: 0px 10px
+      cursor: pointer
+      @include x-small
+        font-size: 28px
+        padding: 0px 5px
+      @include hover-supported
+        &:not(.disabled)
+          animation: beat 0.5s
+          color: $primary_color
+      &.liked
+        color: $primary_color
+      &.disabled
+        cursor: default
+.productBox
+  position: relative
+  &.mask
+    cursor: default
+    pointer-events: none
+  .soldOut
+    position: absolute
+    +size(100%, 100%)
+    top: 0
+    left: 0
+    background-color: rgba(0,0,0,0.5)
+    z-index: 1
+    h6
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translateX(-50%) translateY(-50%)
+      +size(50%, 45px)
+      text-align: center
+      font-size: 24
+      line-height: 40px
+      color: $white_color
+      border: 2px solid $white_color

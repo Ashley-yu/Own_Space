@@ -1,0 +1,341 @@
+//---------- all ----------
+.fadInUp
+  animation: fadeInUp 2.5s
+//---------- all ----------
+
+//---------- top ----------
+header
+  position: relative
+  .container-fluid
+    .carousel
+      margin-top: 60px
+      position: relative
+      .picture
+        +size(100%,calc(100vh - 60px))
+        object-fit: cover
+        object-position: 50% 50%
+        @include medium
+          width: 150%
+      .pictureBox
+        position: absolute
+        +size(95%,85vh)
+        top: 50%
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+        background-color: black
+        opacity: 0.2
+        border: 5px double $white_color
+      h1
+        position: absolute
+        top: 20%
+        left: 20%
+        font-size: 76px
+        font-weight: 800
+        letter-spacing: 5px
+        color: $white_color
+        @include medium
+          left: 15%
+        @include small
+          left: 5%
+          font-size: 48px
+      h3
+        position: absolute
+        top: 35%
+        left: 30%
+        width: 60%
+        font-weight: 400
+        line-height: 50px
+        letter-spacing: 3px
+        color: $white_color
+        @include medium
+          left: 25%
+        @include small
+          left: 15%
+          top: 33%
+          width: 75%
+          line-height: 30px
+          font-size: 20px
+        button.btn
+          font-size: 16px
+          margin: 10px
+          @include button()
+            color: $white_color
+            background-color: $primary_color
+            &:hover
+              background-color: $black_color
+  .explore
+    position: absolute
+    bottom: 8%
+    left: 50%
+    transform: translateX(-50%)
+    font-size: 18px
+    color: $white_color
+    z-index: 3
+    i
+      display: block
+      text-align: center
+      font-size: 35px
+      animation: drop 1s infinite linear
+      cursor: pointer
+      &:hover
+        opacity: 0.7
+//---------- top ----------
+
+//---------- new arrival ----------
+#sectionNewArrival
+  .newArrivalTop
+    position: relative
+    height: 400px
+    margin-bottom: 340px
+    padding: 120px $small_space
+    background-color: #F1F9F9
+    @include medium
+      height: 100%
+      margin-bottom: 0px
+    @include small
+      padding: $large_space $small_space
+    h3
+      text-align: center
+      color: $black_color
+      position: relative
+      span
+        position: absolute
+        width: 100%
+        left: 50%
+        top: 20px
+        transform: translateX(-50%)
+        font-size: 38px
+        font-weight: 800
+        color: rgba($primary_lighten_color, 0.7)
+    .newItem
+      height: 330px
+      max-width: 480px
+      margin-top: $large_space
+      cursor: pointer
+      .newArrivalImg
+        position: relative
+        padding-bottom: 65%
+        background-position: center center
+        background-size: cover
+        overflow: hidden
+        img
+          position: absolute
+          +size(100%,100%)
+          transition: 1s
+          &:hover
+            transform: scale(1.1)
+        p
+          position: absolute
+          bottom: 0
+          left: 0
+          width: 100%
+          padding: 10px
+          margin: 0
+          text-align: center
+          font-size: 20px
+          letter-spacing: 1px
+          color: $white_color
+          background-color: rgba(0,0,0,0.2)
+      .newArrivalTitle
+        text-align: center
+        color: $black_color
+        padding: 5px
+    .newArrivalButton
+      text-align: center
+      padding: $large_space
+      position: relative
+      @include small
+        padding: $medium_space $large_space
+      @include x-small
+        padding: $small_space $large_space
+      hr
+        position: absolute
+        left: 50%
+        transform: translateX(-50%) translateY(-50%)
+        width: 80%
+      button.btn
+        @include button()
+          animation: beat 0.6s infinite
+          color: $white_color
+          background-color: $black_color
+          &:hover
+            background-color: $primary_color
+  .backgroundImg
+    background-image: url("../src/assets/img/writing_on_notebook.jpg")
+    background-size: cover
+    background-position: top center
+    background-attachment: fixed
+    transform: translateZ(0);
+    will-change: transform;
+    height: 360px
+    margin: $large_space 0px
+    @include medium
+      margin-top: 0px
+    @include small
+      display: none
+//---------- new arrival ----------
+
+//---------- popular ----------
+section#popularCategories
+  position: relative
+  padding-bottom: 100px
+  .popularContent
+    max-width: 1300px
+    padding: $large_space $small_space
+    .popularTop
+      h3
+        text-align: center
+        color: $black_color
+        position: relative
+        span
+          position: absolute
+          width: 100%
+          left: 50%
+          top: 20px
+          transform: translateX(-50%)
+          font-size: 38px
+          font-weight: 800
+          color: rgba($primary_lighten_color, 0.7)
+    .popularBottom
+      padding: $large_space 120px
+      @include large
+        padding: $large_space
+      @include medium
+        padding: $large_space $small_space
+      .popularImg
+        position: relative
+        padding-bottom: 65%
+        background-position: center center
+        background-size: cover
+        border: 3px solid $white_color
+        border-radius: $radius
+        cursor: pointer
+        img
+          position: absolute
+          +size(100%,100%)
+        p
+          position: absolute
+          top: 0
+          left: 0
+          +size(100%,100%)
+          display: flex
+          justify-content: center
+          align-items: center
+          text-align: center
+          font-size: 24px
+          font-weight: 500
+          letter-spacing: 1px
+          color: $white_color
+          background-color: rgba(0,0,0,0.5)
+          transition: 1s
+          opacity: 0
+          &:hover
+            opacity: 1
+          @include medium
+            opacity: 1
+            &:hover
+              color: $black_color
+              background-color: transparent
+  .background
+    display: flex
+    justify-content: center
+    align-items: center
+    position: absolute
+    width: 100%
+    height: 400px
+    left: 0
+    bottom: 0px
+    background-color: $primary_lighten_color
+    .text
+      border: 1px solid $white_color
+      position: absolute
+      bottom: 50px
+      padding: $small_space
+      text-align: center
+      font-size: 18px
+      font-style: italic
+      letter-spacing: 1px
+      width: 70%
+      max-width: 700px
+      @include x-small
+        width: 100%
+        bottom: 25px
+        border: none
+        border-top: 1px solid $white_color
+      button.btn
+        margin: 0px $medium_space
+        @include button()
+          color: $white_color
+          background-color: $black_color
+          &:hover
+            background-color: $primary_color
+//---------- popular ----------
+
+//---------- cooperation ----------
+section#cooperation
+  overflow: hidden
+  padding: 80px
+  @include medium
+    padding: 80px 15px
+  .container
+    max-width: 1000px
+    .left
+      position: relative
+      @include medium
+        margin-bottom: $large_space
+      h3
+        color: $black_color
+      p
+        letter-spacing: 1px
+        padding: 5px
+        margin-top: $medium_space
+        color: $black_color
+      span
+        position: absolute
+        width: 100%
+        left: 0
+        bottom: $large_space
+        font-size: 42px
+        font-weight: 900
+        color: rgba($primary_lighten_color, 0.7)
+        @include medium
+          top: -45px
+          text-align: right
+          font-size: 38px
+        @include small
+          font-size: 28px
+    .right
+      position: relative
+      .contactPic
+        position: absolute
+        +size(100%, 100%)
+        left: 45%
+        bottom: -15px
+        transform: rotate(5deg)
+        background-image: url("../src/assets/img/birdhouse.jpg")
+        background-size: cover
+        background-position: center center
+        z-index: -1
+        @include medium
+          transform: rotate(5deg) scale(1.2)
+      .contact
+        max-width: 450px
+        padding: 30px
+        margin: 30px
+        border-radius: $radius
+        background-color: $white_color
+        box-shadow: 0px 2px 10px rgba(0,0,0,0.2)
+        @include medium
+          margin: 0
+        textArea
+          height: 150px
+          resize: none
+        .formButton
+          text-align: right
+          button.btn
+            @include button()
+              color: $white_color
+              background-color: $black_color
+              &:hover
+                background-color: $primary_color
+//---------- cooperation ----------

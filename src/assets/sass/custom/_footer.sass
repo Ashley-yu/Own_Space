@@ -1,0 +1,41 @@
+footer
+  background-color: $white_color
+  border-top: 1px solid $secondary_color
+  .container
+    padding: $large_space $small_space
+    .row
+      @include medium
+        flex-direction: column
+    .title
+      margin: 5px 10px
+      letter-spacing: 1px
+      color: $secondary_color
+      font-weight: 300
+      font-size: 14px
+      @include x-small
+        display: none
+    .info
+      margin: 0px 5px
+      font-weight: 500
+      font-size: 16px
+      a
+        color: $black_color
+    i
+      color: $primary_color
+      font-size: 20px
+    .follow-icon
+      margin: 0px 5px
+      font-size: 32px
+      @include x-small
+        margin-bottom: 10px
+    .copyright
+      margin: 5px 10px
+      color: $secondary_color
+      font-weight: 300
+      font-size: 14px
+      @include x-small
+        font-size: 13px
+        margin-top: 10px
+      .adminLogin
+        font-size: 12px
+        color: $secondary_color

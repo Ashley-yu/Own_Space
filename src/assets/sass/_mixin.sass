@@ -1,0 +1,35 @@
+@mixin large()
+  @media screen and (max-width: 1200px)
+    @content
+
+@mixin medium()
+  @media screen and (max-width: 992px)
+    @content
+
+@mixin small()
+  @media screen and (max-width: 768px)
+    @content
+
+@mixin x-small()
+  @media screen and (max-width: 576px)
+    @content
+
+// 行動裝置不顯示hover效果
+@mixin hover-supported()
+  @media not all and (pointer: coarse)
+    &:hover
+      @content
+
+@mixin size($width,$height)
+  width: $width
+  height: $height
+
+@mixin button()
+  padding: 6px 14px
+  letter-spacing: 1px
+  transition: $duration
+  border: none
+  @include x-small
+    padding: 10px 24px
+    font-size: 17px
+  @content

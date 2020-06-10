@@ -1,0 +1,107 @@
+.bookmark
+  position: absolute
+  padding: $small_space
+  bottom: 15%
+  left: $large_space
+  @include medium
+    left: $small_space
+  .breadcrumb
+    background-color: transparent
+    .breadcrumb-item
+      cursor: pointer
+      color: $black_color
+      font-weight: 300
+      a
+        color: $black_color
+        &:hover
+          text-decoration: none
+          color: $primary_color
+      &.active
+        cursor: default
+        color: $secondary_color
+.productDetail
+  padding-bottom: $large_space
+.productPicture
+  position: relative
+  height: 80%
+  padding-bottom: 75%
+  img
+    position: absolute
+    +size(100%,100%)
+    top: -20%
+    object-fit: cover
+    object-position: 50% 50%
+    border: 10px solid $white_color
+    transition: $duration
+    @include medium
+      top: 0
+      border: none
+.productInfo
+  padding: 0px
+  @include small
+    padding: $small_space
+  li
+    list-style: none
+    p
+      margin: 0
+    .productTitle
+      position: relative
+      margin-bottom: $medium_space
+      margin-top: $small_space
+      &::after
+        content: ''
+        +size(60%, 8px)
+        position: absolute
+        bottom: -2px
+        left: $medium_space
+        background-color: rgba($primary_color, 0.5)
+    .productOriginal
+      font-size: 14px
+      text-decoration: line-through
+      color: $black_color
+    .productPrice
+      margin-bottom: $small_space
+      font-size: 18px
+      font-weight: 500
+    .form-control
+      border: none
+      height: 100%
+      padding: 0
+      .productBuy
+        margin: $small_space 0px
+        @include button()
+          background-color: $primary_lighten_color
+          color: $black_color
+          @include hover-supported
+            background-color: $primary_color
+        &.disabled
+          pointer-events: none
+    .productDescription
+      margin-top: 5px
+.similarContent
+  padding: $medium_space
+  margin-top: $small_space
+  border: 1px solid $secondary_color
+  border-radius: $radius
+  .similar
+    overflow-x: scroll
+    flex-wrap: nowrap
+    padding: $small_space 0px
+    @include small
+      margin: 0
+    .productCard
+      max-width: 300px
+      padding: 5px
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.2)
+      color: $black_color
+      cursor: pointer
+      &:hover
+        color: $primary_color
+      .imgWrap
+        height: 180px
+        img
+          +size(100%,100%)
+          object-fit: cover
+          object-position: 50% 50%
+      .cardText
+        padding: 0px 3px

@@ -1,0 +1,35 @@
+.manage
+  padding: $large_space
+  padding-bottom: 0px
+  @include medium
+    padding: $large_space 0px
+    padding-bottom: 0px
+  button.btn
+    @include button()
+      background-color: $primary_lighten_color
+      color: $black_color
+      &:hover
+        background-color: $primary_color
+  button.btn.btn-sm
+    border: 1px solid $white_color
+    i
+      font-size: 16px
+  .tableMain
+    margin-bottom: $medium_space
+    table
+      min-width: 560px
+      th,td
+        @include medium
+          padding: 8px
+          font-size: 14px
+        @include small
+          padding: 5px
+          font-size: 13px
+  .tableDetail
+    table
+      min-width: 680px
+      th,td
+        padding: 8px
+        font-size: 14px
+      td
+        vertical-align: middle

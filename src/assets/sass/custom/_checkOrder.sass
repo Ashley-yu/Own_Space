@@ -1,0 +1,62 @@
+.checkOrder
+  .listContent
+    .order
+      .orderList
+        .productImg
+          +size(90px, 90px)
+          @include medium
+            +size(78px, 78px)
+          @include x-small
+            +size(70px, 70px)
+        .productName,.productQty,.productNum,.productTotal,.productDel
+          padding-top: $small_space
+          @include small
+            padding-top: 5px
+        .productName,.productTotal,.productDel
+          @include x-small
+            padding-top: 0px
+  .infoArea
+    .couponInfo
+      max-width: 380px
+      padding: $small_space 0px
+    .totalInfo
+      max-width: 380px
+      td
+        border: none
+        font-size: 15px
+        padding: 10px
+        @include medium
+          padding: 8px 2px
+        @include small
+          padding: 8px 16px
+    .couponInfo
+      input
+        border: 1px solid $primary_color
+      span
+        padding: 6px 18px
+        font-weight: 400
+        letter-spacing: 2px
+        color: $white_color
+        background-color: $primary_color
+        border: 1px solid $primary_color
+        cursor: pointer
+        transition: $duration
+        @include medium
+          padding: 6px 9px
+        @include small
+          padding: 6px 18px
+        &:hover
+          background-color: $primary_darken_color
+          color: $white_color
+  .nextStep,.check
+    text-align: right
+    margin: $small_space
+    .btn
+      @include button()
+        background-color: $primary_lighten_color
+        color: $black_color
+        &:hover
+          background-color: $primary_color
+  .nextStep
+    width: 100%
+    max-width: 380px

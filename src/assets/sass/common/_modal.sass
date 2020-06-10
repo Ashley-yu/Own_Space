@@ -1,0 +1,26 @@
+.modal-header
+  border: none
+  background-color: $primary_lighten_color
+  span
+    color: $black_color
+  button
+    border: none
+    background-color: transparent
+    span
+      line-height: 30px
+.modal-body
+  padding-bottom: $medium_space
+  p,h3
+    margin: $small_space
+    color: $black_color
+  i
+    color: $primary_lighten_color
+  .ckeckIcon
+    font-size: 180px
+.modal-footer
+  button
+    @include button()
+      background-color: $primary_lighten_color
+      color: $black_color
+      &:hover
+        background-color: $primary_color

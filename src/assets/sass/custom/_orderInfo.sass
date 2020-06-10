@@ -1,0 +1,45 @@
+.orderInfo
+  .listContent
+    .order
+      .purchaseDate
+        padding: 5px
+        margin: 0px
+        color: $black_color
+      .orderList
+        border: none
+        margin-bottom: 5px
+        .productName,.productQty,.productNum,.productTotal,.productDel
+          padding: 5px
+      .productSummary
+        border-top: 1px solid $secondary_color
+        padding-top: $small_space
+    .infoArea
+      // 解決email換行問題
+      table
+        table-layout: fixed
+        td
+          word-wrap: break-word
+      .title
+        width: 30%
+        text-align: left
+      .text
+        text-align: left
+      .incomplete
+        color: $primary_darken_color
+      .complete
+        color: $title_color
+      .payment
+        text-align: right
+        margin: $small_space
+        .btn
+          animation: beat 0.7s infinite
+          @include button()
+            background-color: $primary_lighten_color
+            color: $black_color
+            &:hover
+              background-color: $primary_color
+      .payCode
+        font-weight: 700
+        color: $title_color
+  .completeMessage
+    text-align: center

@@ -1,0 +1,44 @@
+.orderProgress
+  display: flex
+  justify-content: center
+  align-items: center
+  position: absolute
+  top: 0
+  left: 0
+  +size(70%, 100%)
+  background-color: transparent
+  text-align: center
+  min-width: 310px
+  @include medium
+    width: 100%
+  .step
+    padding: 14px 38px
+    margin: 0px 5px
+    font-size: 16px
+    border-radius: $radius
+    border: 1px solid $secondary_color
+    color: $black_color
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      left: calc(50% - 25px)
+      bottom: 13px
+      +size(70px, 8px)
+      background-color: rgba($primary_color, 0.5)
+      opacity: 0
+    &.current::after
+      opacity: 1
+      @include x-small
+        opacity: 0
+    &.current
+      font-weight: 500
+      color: black
+      border: 1px solid $primary_color
+      @include x-small
+        background-color: rgba($primary_color, 0.7)
+    p
+      margin: 0
+      @include x-small
+        display: inline-block
+        margin-left: 5px

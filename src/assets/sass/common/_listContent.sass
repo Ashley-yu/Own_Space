@@ -1,0 +1,84 @@
+.listContent
+  padding-bottom: $large_space
+  @include x-small
+    min-width: 310px
+    font-size: 15px
+  h3
+    margin-top: $small_space
+    font-size: 20px
+    font-weight: 400
+    color: $primary_darken_color
+  table
+    thead
+      text-align: center
+      th
+        font-weight: 500
+        letter-spacing: 1px
+        @include medium
+          padding: 8px
+    tbody
+      td
+        text-align: center
+        @include medium
+          padding: 8px
+    tfoot
+      text-align: right
+      td
+        @include medium
+          padding: 8px
+  .order
+    padding: $small_space
+    border: 1px solid $secondary_color
+    border-radius: $radius
+    .orderList
+      list-style: none
+      padding: 5px $small_space
+      margin-bottom: $small_space
+      border-bottom: 1px solid $secondary_color
+      .productImg
+        margin: 0px auto
+        img
+          +size(100%,100%)
+          object-fit: cover
+          object-position: 50% 50%
+      .productName,.productQty,.productNum,.productTotal,.productDel
+        padding: 5px
+      .productName
+        cursor: pointer
+        &:hover
+          color: $primary_color
+      .productQty,.productNum
+        text-align: center
+        @include small
+          text-align: left
+      .productNum
+        .countNumber
+          display: flex
+          justify-content: center
+          align-items: center
+          @include small
+            justify-content: left
+          .minus,.add,.productNumber
+            font-size: 15px
+            min-height: 36px
+      .productTotal,.productDel
+        text-align: right
+        span
+          cursor: pointer
+          color: $secondary_color
+          &:hover
+            color: $primary_darken_color
+          i
+            font-size: 18px
+    .productSummary
+      border: none
+      margin: 0
+      .summary
+        text-align: right
+        padding: 5px
+  .infoArea
+    padding: 0px $small_space
+    border: 1px solid $primary_color
+    border-radius: $radius
+    @include medium
+      margin: auto

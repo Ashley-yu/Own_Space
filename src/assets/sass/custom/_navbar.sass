@@ -1,0 +1,85 @@
+.itemContent
+  tbody
+    .itemName
+      cursor: pointer
+      &:hover
+        color: $primary_color
+.shop
+  @include small
+    display: none
+.dropdown-menu
+  max-width: 330px
+  max-height: 360px
+  overflow-y: auto
+  .cartIcon
+    font-size: 20px
+    color: $secondary_color
+    cursor: pointer
+    &:hover
+      color: $primary_color
+.itemContent
+  color: $black_color
+  font-weight: 300
+  @include small
+    width: 268px
+  tbody
+    padding: 3px 10px
+    @include small
+      padding: 3px 5px
+  td
+    padding: 5px
+  tr
+    margin: 3px
+    border-bottom: 1px solid $secondary_color
+  .itemTitle
+    text-align: center
+    font-size: 18px
+    font-weight: 300
+    letter-spacing: 1px
+    margin: 0
+  .itemPicture
+    .picturewrap
+      width: 90%
+      min-width: 50px
+      height: 60px
+      img
+        +size(100%,100%)
+        object-fit: cover
+        object-position: 50% 50%
+  .itemName
+    width: 50%
+    font-size: 14px
+  .itemDelete
+    width: 5%
+    font-weight: 500
+    text-align: center
+    span
+      cursor: pointer
+      &:hover
+        color: $primary_darken_color
+.totalInfo
+  text-align: center
+  margin-top: $small_space
+  div
+    display: inline-block
+    width: 45%
+    font-size: 16px
+    font-weight: 300
+  .itemTotal
+    padding-right: 18px
+    text-align: right
+  .checkOut
+    width: 90%
+    margin-top: 10px
+    @include button()
+      background-color: $primary_lighten_color
+      color: $black_color
+      &:hover
+        background-color: $primary_color
+        animation: beat 0.5s
+li.nav-item.dropdown.avoid
+  pointer-events: none
+#cartDropdown
+  i
+    &.empty
+      animation: wiggle 3s infinite

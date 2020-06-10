@@ -1,0 +1,35 @@
+.buyerInfo
+  .listContent
+    .order
+      .orderList
+        font-size: 15px
+        .productImg
+          +size(50px, 50px)
+          @include medium
+            +size(42px, 42px)
+          @include small
+            +size(70px, 70px)
+          @include x-small
+            +size(48px, 48px)
+        .productName,.productQty,.productNum,.productTotal,.productDel
+          padding-top: 0px
+          @include small
+            padding-top: 5px
+        .productQty
+          text-align: right
+          padding-left: 5px
+    .infoArea
+      .userInfo
+        padding-top: $small_space
+      .marker
+        padding-left: 2px
+        font-size: 20px
+        color: $primary_color
+      .btnArea
+        margin: $small_space
+        .btn
+          @include button()
+            background-color: $primary_lighten_color
+            color: $black_color
+            &:hover
+              background-color: $primary_color
