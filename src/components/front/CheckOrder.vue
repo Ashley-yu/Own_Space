@@ -6,7 +6,7 @@
       .listContent
         h3 購買清單
         .row
-          .col-12(:class="{'col-md-8': isConfirm}")
+          .col-12(:class="{'col-md-7': isConfirm}")
             ul.order
               li.orderList(v-for="(item, index) in cart" :key="item.id")
                 .row
@@ -45,7 +45,7 @@
               button.btn(v-else @click.prevent="confirmCart")
                 i.fas.fa-clipboard-check.mr-1
                 | 確認送出
-          .col-md-4(v-if="isConfirm")
+          .col-md-5(v-if="isConfirm")
             .infoArea.d-flex.justify-content-center.align-items-center.flex-column
               .input-group.couponInfo
                 input.form-control(type='text' placeholder="優惠券代碼" v-model="coupon_code")
